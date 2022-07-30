@@ -42,25 +42,25 @@
                              <form  action="edit_product_script.php?id=<?php echo $id; ?>" method="POST" enctype="multipart/form-data">
                             <div class="form-group col-sm-6 ">
                                 <label for="name">Name</label>
-                                <input class="form-control" name="name" value="<?php echo $row["name"];?>">
+                                <input class="form-control" name="name" value="<?php echo $row["name"];?>" required>
                             </div>
                             <div class="form-group col-sm-6 ">
                                 <label for="price">Price</label>
-                                <input type="text" class="form-control" name="price" value="<?php echo $row["price"];?>">
+                                <input type="text" class="form-control" name="price" value="<?php echo $row["price"];?>" required>
                              </div>
                                 <div class="form-group col-sm-6">
                                 <h4>Product Image</h4>
                                 <img src="<?php echo $row["product_image"]; ?>">
-                                <input type="file" name="product_image">
+                                <input type="file" name="product_image" accept="image/png, image/gif, image/jpeg" required>
                                 </div>
                                  <br><br><br><br><br>
                                 <div class="form-group col-sm-6">
                                     <label for="description">Description</label>
-                                   <textarea cols="60" rows="6" class="form-control" name="description"><?php echo $row["description"];?></textarea>
+                                   <textarea cols="60" rows="6" class="form-control" name="description" required><?php echo $row["description"];?></textarea>
                             </div>
                             <div class="form-group col-sm-6 ">
                                 <label for="quantity">Quantity</label>
-                                <input type="text" class="form-control"  name="quantity" value="<?php echo $row["quantity"];?>">
+                                <input type="text" class="form-control"  name="quantity" value="<?php echo $row["quantity"];?>" required>
                             </div>
                                 <div class="form-group col-sm-6 ">
                                 <label for="category">Category</label>
